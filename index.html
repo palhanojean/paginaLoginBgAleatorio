@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+        height: 300px;
+        width: 250px;
+        box-shadow: -1px 1px 3px gray,
+                     1px -1px 3px white;
+        border-radius: 20px;
+        font-size: arial;
+    }
+    .box{
+        border: none;
+        outline: none;
+        padding: 10px;
+        margin: 15px;
+        box-shadow:inset -1px 1px 3px gray,
+                    inset 1px -1px 3px white;
+        border-radius: 40px;
+        font-size: 15px;
+        font-weight: bold;
+        border: 2px solid lightgreen;
+        transition: .3s ease-out;
+    }
+    input:placeholder-shown{
+        font-size: 13px;
+        border: none;
+    }
+    input:invalid{
+        border-color: tomato;
+    }
+    .button{
+        height: 30px;
+        width: 190px;
+        border: none;
+        outline: none;
+        box-shadow:inset -1px 1px 3px gray,
+                    inset 1px -1px 3px white;
+        border-radius: 40px;
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .button:hover{
+        background: deeppink;
+        color: white;
+    }
+
+</style>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="jquery.randombg.js"></script>
+<body>
+    <form action="">
+        <div class="main">
+            <h4>Simple Login Form</h4>
+            <input type="text" placeholder="name" class="box">
+            <input type="email" placeholder="e-mail" class="box">
+            <input type="password" placeholder="password"class="box">
+            <input type="button" value="login" class="button">
+        </div>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $('html').randombg();
+        });
+    </script>
+</body>
+</html>
